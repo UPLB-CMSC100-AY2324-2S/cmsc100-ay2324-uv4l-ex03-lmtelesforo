@@ -1,9 +1,11 @@
 // EXERCISE 03: JavaScript Basics Part 1
 
+// declaring variables
 const password1 = "Password12";
 const password2 = "Password12";
 const username = "Laira";
 
+// checks if password meets the requirements
 function validatePassword(password1, password2) {
     let mixed = false;
     let match = false;
@@ -12,7 +14,7 @@ function validatePassword(password1, password2) {
     let hasUpper = false;
     let hasLower = false;
 
-
+    // check if password length is at least 8
     if (password1.length >= 8) {
         atLeast8 = true;
     }
@@ -20,6 +22,7 @@ function validatePassword(password1, password2) {
         return false;
     }
 
+    // check if at least 1 number, 1 uppercase character, and 1 lowercase character
     for (let a = 0; a < password1.length; a++) {
         let i = password1.charAt(a);
         if (i === i.toUpperCase() && i !== i.toLowerCase()) {
@@ -40,7 +43,7 @@ function validatePassword(password1, password2) {
         return false;
     }
 
-
+    // check if password matches
     if (password1 === password2) {
         match = true;
     }
@@ -54,10 +57,11 @@ function validatePassword(password1, password2) {
     }
 }
 
+// reverses the password string
 function reversePassword(password1) {
     var newPassword = "";
 
-    for (let i = password1.length - 1; i >= 0; i--) { 
+    for (let i = password1.length - 1; i >= 0; i--) { // start from last index  
         let char = password1[i]; 
 
         newPassword = newPassword + char;
@@ -66,6 +70,7 @@ function reversePassword(password1) {
     return newPassword;
 }
 
+// stores the username and password to the object
 function userObject(username, password1, password2) {
     if (validatePassword(password1, password2) == true) {
         var newPass = reversePassword(password1, password2);
