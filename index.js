@@ -87,3 +87,9 @@ function userObject(username, password1, password2) {
     return user;
 }
 
+// function call
+var userInfo = userObject(username, password1, password2);
+// checks if the created object is to be printed
+if (validatePassword(password1, password2) == true) {
+    console.log(userInfo);
+}
