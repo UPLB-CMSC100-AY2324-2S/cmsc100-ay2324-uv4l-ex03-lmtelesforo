@@ -1,8 +1,8 @@
 // EXERCISE 03: JavaScript Basics Part 1
 
 // declaring variables
-const password1 = "Password12";
-const password2 = "Password12";
+const password1 = "Hello1234";
+const password2 = "Hello1234";
 const username = "Laira";
 
 // checks if password meets the requirements
